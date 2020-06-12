@@ -1,0 +1,13 @@
+{
+  "charitys": [
+    {"id": 1, "name": "KUPATH RABBI MEIR BAAL HANES", "photo_url": "https://kupathrabbimeir.org/Skins/Kartris/Images/logo.png", "balance": 0.0},
+    {"id": 2, "name": "Hatzalah of Crown Heights", "photo_url": "https://www.hatzalah.ch/wp-content/uploads/2017/02/CHlogoweb.png", "balance": 0.0},
+    {"id": 3, "name": "Keren Simchas Chosson V'Kallah", "photo_url": "https://www.kscvk.org/images/logo-color-120.png", "balance": 0.0}
+  ],
+  "users": [
+    {"id": 1, "name": "Rando User", "photo_url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fyt3.ggpht.com%2F-7bU6rlbbKpY%2FAAAAAAAAAAI%2FAAAAAAAAAAA%2FT5vvBivtNns%2Fs900-c-k-no-mo-rj-c0xffffff%2Fphoto.jpg&f=1&nofb=1", "card_info": 0, "balance": 0.0}
+  ],
+  "user_charitys": [
+    {"id": 1, "charityId": 1, "userId": 1}
+  ]
+}
