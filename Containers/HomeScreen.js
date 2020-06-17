@@ -7,11 +7,15 @@ import Header from '../Components/Header'
 const HomeScreen = ({user, navigation}) => {
 
   const [charities, setCharities] = useState([])
+  const [prices, setPrices] = useState([])
   
   const openDraw = () => {
     navigation.openDrawer()
   }
 
+  const priceHandler = (event) => {
+
+  }
   console.log(user)
   useEffect(() => {
     fetch(`http://localhost:3000/charitys`)
