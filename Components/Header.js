@@ -8,7 +8,10 @@ const Header = ({balance, open}) => {
     <View style={styles.header}>
       <Icon name='bars' size={25} onPress={() => open()} />
       <Text style={styles.text}>Tzedakah</Text>
-      <Text style={styles.balance}>{`Balance:\n$${balance}`}</Text>
+      <Text style={styles.textBalance}>
+        <Text style={styles.balance}>{`Balance:`}</Text>
+        <Text>{`\n$${balance}`}</Text>
+      </Text>
     </View>
   )
 
@@ -20,19 +23,30 @@ const styles = StyleSheet.create({
     padding: 15,
     backgroundColor: 'white',
     flexDirection: "row",
-    justifyContent: "space-between",
+    justifyContent: 'space-between',
     alignItems: 'center'
   },
   text: {
     color: 'black',
     fontSize: 23,
-    textAlign: 'center'
+    textAlign: 'center',
+    fontWeight: 'bold',
+    paddingLeft: 40
+    // marginLeft: 'auto',
+    // marginRight: 'auto'
+  },
+  textBalance: {
+    lineHeight: 15, 
+    textAlign: 'center',
   },
   balance: {
     color: 'black',
     fontSize: 15,
-    textAlign: 'left',
-    lineHeight: 15
+    fontWeight: '500'
+  },
+  balanceAmount: {
+    color: 'black',
+    fontSize: 10,
   }
 })
 
