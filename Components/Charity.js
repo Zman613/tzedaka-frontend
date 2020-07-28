@@ -4,16 +4,38 @@ import Icon from 'react-native-vector-icons/dist/FontAwesome'
 import Amount from './Amount'
 
 const defaultAmounts = [
-  {amount: 0.18},
-  {amount: 0.36},
-  {amount: 1},
-  {amount: 5}
+  {id: 1, amount: 0.18, clicked: false},
+  {id: 2, amount: 0.36, clicked: false},
+  {id: 3, amount: 1, clicked: false},
+  {id: 4, amount: 5, clicked: false}
 ]
 
 const Charity = ({photo_url, name, id}) => {
  
   const [amounts, setAmount] = useState(defaultAmounts)
 
+  const clicked = (id, clicked) => {
+    console.log(id)
+    if (clicked) {
+      setAmount(amounts.map(a => { 
+        if (a.id === id) {
+          return {...a, clicked: false}
+        }
+        return a
+      }))
+    } else {
+      let m = amounts.map(a => {
+        if (a.id === id) {
+          return {...a, clicked: true}
+        } else {
+          return {...a, clicked: false}
+        }
+      })
+      setAmount(m)
+    }
+  }
+
+  console.log(amounts)
   return (
     <View style={styles.charityView}>
       <TouchableOpacity style={styles.charity}>
@@ -30,7 +52,7 @@ const Charity = ({photo_url, name, id}) => {
         </View>
       </TouchableOpacity>
       <View style={styles.amount}>
-        {amounts && amounts.map((a, i) => <Amount key={i} amount={a.amount} id={id}  />)}
+        {amounts && amounts.map((a, i) => <Amount key={i} amount={a.amount} id={id} clicked={clicked} click={a.clicked} idA={a.id}  />)}
         <TouchableOpacity style={styles.circle}>
           <Text style={styles.text}>Other</Text>
         </TouchableOpacity>
@@ -44,8 +66,10 @@ const styles = StyleSheet.create({
   charityView: {
     padding: 15,
     backgroundColor: '#f8f8f8',
-    borderBottomWidth: 1,
-    borderColor: '#eee',
+    borderWidth: 2,
+    borderColor: '#ddd',
+    borderRadius: 15,
+    margin: 7
   },
   charity: {
     flexDirection: "row",
@@ -77,7 +101,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: 'center',
-    padding: 5
+    padding: 5,
   },
   circle: {
     width: 63,

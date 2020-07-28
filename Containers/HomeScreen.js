@@ -7,7 +7,7 @@ import Footer from '../Components/Footer'
 
 const HomeScreen = ({user, navigation}) => {
 
-  const [charities, setCharities] = useState([])
+  const [charities, setCharities] = useState(user.charities)
   const [prices, setPrices] = useState([])
   
   const openDraw = () => {
@@ -21,12 +21,7 @@ const HomeScreen = ({user, navigation}) => {
       [...prevState, {id, amount}]
     })
   }
-  console.log(user)
-  useEffect(() => {
-    fetch(`http://localhost:3000/charitys`)
-    .then(resp => resp.json())
-    .then(charities => setCharities(charities))
-  }, [])
+  
   return (
     <View style={styles.container}>
       <Header balance={user.balance} open={openDraw} />

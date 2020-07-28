@@ -11,7 +11,7 @@ const App = () => {
   const [user, setUser] = useState({})
 
   useEffect(() => {
-    fetch(`http://localhost:3000/users/1?_embed=user_charitys`)
+    fetch(`http://localhost:3000/users/1`)
     .then(resp => resp.json())
     .then(user => setUser(user))
   }, [])

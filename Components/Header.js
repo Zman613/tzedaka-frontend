@@ -10,7 +10,7 @@ const Header = ({balance, open}) => {
       <Text style={styles.text}>Tzedakah</Text>
       <Text style={styles.textBalance}>
         <Text style={styles.balance}>{`Balance:`}</Text>
-        <Text>{`\n$${balance}`}</Text>
+        <Text>{`\n$${balance / 100}`}</Text>
       </Text>
     </View>
   )
