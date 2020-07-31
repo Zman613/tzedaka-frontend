@@ -7,9 +7,13 @@ import Footer from '../Components/Footer'
 
 const HomeScreen = ({user, navigation}) => {
 
-  const [charities, setCharities] = useState(user.charities)
+  const [charities, setCharities] = useState([])
   const [prices, setPrices] = useState([])
   
+  useEffect(() => {
+    setCharities(user.charities)
+  }, [])
+
   const openDraw = () => {
     navigation.openDrawer()
   }
