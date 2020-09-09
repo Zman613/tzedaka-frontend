@@ -37,6 +37,10 @@ const Charity = ({photo_url, name, id}) => {
 
   console.log(amounts)
   return (
+    <View>
+      {/* <TouchableOpacity style={styles.circleIcon}>
+        <Icon name='plus' style={styles.icon} />
+      </TouchableOpacity> */}
     <View style={styles.charityView}>
       <TouchableOpacity style={styles.charity}>
         <View style={styles.charityTitle}>
@@ -58,6 +62,7 @@ const Charity = ({photo_url, name, id}) => {
         </TouchableOpacity>
       </View>
     </View>
+    </View>
   )
 
 }
@@ -69,7 +74,7 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: '#ddd',
     borderRadius: 15,
-    margin: 7
+    margin: 7,
   },
   charity: {
     flexDirection: "row",
@@ -114,7 +119,26 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 16,
     lineHeight: 57
-  }
+  },
+  circleIcon: {
+    width: 63,
+    height: 63,
+    borderRadius: 63/2,
+    borderWidth: 1,
+    borderColor: 'black',
+    alignSelf: 'flex-end',
+    // marginRight: 20,
+    // marginBottom: 20,
+    backgroundColor: 'white',
+    opacity: 0.8,
+    zIndex: 3,
+    elevation: 3,
+  },
+  icon: {
+    textAlign: 'center',
+    fontSize: 30,
+    lineHeight: 60
+  },
 })
 
 export default Charity
