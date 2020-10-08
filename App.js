@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import {View, Text, StyleSheet, FlatList} from 'react-native'
-import HomeScreen from './Containers/HomeScreen';
+import Home from './Containers/Home';
 import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 
@@ -21,7 +21,7 @@ const App = () => {
     <NavigationContainer>
       <Drawer.Navigator drawerStyle={styles.container} initialRouteName="Home">
         <Drawer.Screen name="Home"> 
-          {props => <HomeScreen {...props} user={user} />}
+          {props => <Home {...props} user={user} />}
         </ Drawer.Screen>
         {/* <Drawer.Screen name="Notifications" component={NotificationsScreen} /> */}
       </Drawer.Navigator>

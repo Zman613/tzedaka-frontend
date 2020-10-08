@@ -6,7 +6,6 @@ import Footer from '../Components/Footer'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import Icon from 'react-native-vector-icons/dist/FontAwesome'
 
-
 const HomeScreen = ({user, navigation}) => {
 
   const [charities, setCharities] = useState([])
