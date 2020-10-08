@@ -32,7 +32,7 @@ const HomeScreen = ({user, navigation}) => {
       <Header balance={user.balance} open={openDraw} />
       {<FlatList data={charities} keyExtractor={item => item.id.toString()} renderItem={({ item }) => <Charity {...item} priceHandler={priceHandler} />} />}
       <View style={styles.viewCircle}>
-        <TouchableOpacity style={styles.circle}>
+        <TouchableOpacity style={styles.circle} onPress={() => navigation.navigate('Add Charity')}>
           <Icon name='plus' style={styles.icon} />
         </TouchableOpacity>
       </View>
