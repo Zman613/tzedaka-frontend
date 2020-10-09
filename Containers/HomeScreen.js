@@ -46,31 +46,31 @@ const styles = StyleSheet.create({
       flex: 1,
       paddingTop: 60,
     },
-    viewCircle: {
-      justifyContent: 'flex-end', 
-      alignItems: 'flex-end', 
-      zIndex: 2, 
-      position: 'absolute', 
-      right: '5%', 
-      top: '89%', 
-      elevation: 2,
-    },
-    circle: {
-      width: 67,
-      height: 67,
-      borderRadius: 67/2,
-      borderWidth: 1,
-      borderColor: 'black',
-      marginRight: 20,
-      marginBottom: 20,
-      backgroundColor: 'white',
-      opacity: 0.8,
-    },
-    icon: {
-      textAlign: 'center',
-      fontSize: 30,
-      lineHeight: 65
-    },
+  viewCircle: {
+    justifyContent: 'flex-end', 
+    alignItems: 'flex-end', 
+    zIndex: 2, 
+    position: 'absolute', 
+    right: '5%', 
+    top: '89%', 
+    elevation: 2,
+  },
+  circle: {
+    width: 67,
+    height: 67,
+    borderRadius: 67/2,
+    borderWidth: 1,
+    borderColor: 'black',
+    marginRight: 20,
+    marginBottom: 20,
+    backgroundColor: 'white',
+    opacity: 0.8,
+  },
+  icon: {
+    textAlign: 'center',
+    fontSize: 30,
+    lineHeight: 65
+  },
 })
 
 export default HomeScreen

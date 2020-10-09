@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import {View, Text, StyleSheet} from 'react-native'
+import { FlatList } from 'react-native-gesture-handler'
+import CharityAll from '../Components/CharityAll'
 
 const AddCharity = ({navigation}) => {
 
@@ -16,15 +18,18 @@ const AddCharity = ({navigation}) => {
   console.log(charities)
 
   return (
-    <View>
-      <Text>Hello</Text>
+    <View style={styles.container}>
+      <FlatList data={charities} keyExtractor={item => item.id.toString()} renderItem={({ item }) => <CharityAll {...item} /> } />
     </View>
   )
 
 }
 
 const styles = StyleSheet.create({
-
+  container: {
+    flex: 1,
+    paddingTop: 60,
+  },
 })
 
 export default AddCharity
